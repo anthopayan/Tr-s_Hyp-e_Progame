@@ -45,11 +45,8 @@ console.log(argument);
             listplatform.push(platform.platform.name);
           });
           articleDOM.querySelector("p.platforms").innerHTML = listplatform.join(', ');
-          var liststore = [];
-          stores.forEach((store) => {
-            liststore.push(`http://www.${store.store.domain}`);
-          });
-          articleDOM.querySelector("a.stores").innerHTML = liststore.join(', ');
+          articleDOM.querySelector("a.stores").innerHTML = stores[0].store.name;
+          articleDOM.querySelector("a.stores").href = `http://${stores[0].store.domain}`;
         });
     };
 
@@ -61,16 +58,26 @@ console.log(argument);
       <section class="page-detail">
         <div class="article">
           <h1 class="title"></h1>
-          <p class="release-date">Release date : <span></span></p>
           <p class="description"></p>
+          <p>Release Date:</p>
+          <p class="release-date">Release date : <span></span></p>
+          <p>Publisher:</p>
           <p class="publishers"></p>
+          <p>Tags:</p>
           <p class="tags"></p>
+          <p>Genre:</p>
           <p class="genres"></p>
+          <p>Developer:</p>
           <p class="developers"></p>
+          <p>Platforms:</p>
           <p class="platforms"></p>
+          <p>Moyenne:</p>
           <p class="rating"></p>
+          <p>Votes:</p>
           <p class="ratings_count"></p>
+          <p>Site:</p>
           <a class="site"></a>
+          <p>BUY:</p>
           <a class="stores" ></a>
         </div>
       </section>

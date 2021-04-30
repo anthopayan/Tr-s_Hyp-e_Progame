@@ -5,7 +5,7 @@ import { PageList } from "./PageList.js";
 const routes = {
     "": Home,
     "pagelist": PageList,
-    "pagedetail": PageDetail,
+    "game": PageDetail,
   };
 
 export { routes };
